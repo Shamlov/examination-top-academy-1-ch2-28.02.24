@@ -1,17 +1,19 @@
 @import "null.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
-// font-family: "Roboto", sans-serif;
+
 @mixin flexible () {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+// общие стили страницы--------------------------------------------------------
 $color-text_light: rgb(245,245,245);
 $color-text_dark: rgb(55,55,55);
 $color-background-page: rgb(230,230,230);
 $color-background-block: rgb(245,245,245);
 $color-element_1: rgb(189,25,75);
+
 
 .line {
   border-bottom: 1px solid $color-text_dark;
@@ -36,23 +38,23 @@ $color-element_1: rgb(189,25,75);
 }
 
 .btn {
-
-  height: 30px;
   color: $color-text_light;
   cursor: pointer;
+  text-wrap: nowrap;
+  * {
+    padding: 10px 15px;
+    text-align: center;
+  }
   &:hover {
     background-color: $color-element_1;
-    background-color: rgba(255, 255, 255, 0.185);
+  }
+  a {
+    color: $color-text_dark;
+    &:hover {
+      color: $color-text_light;
+    }
   }
 } 
-
-a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  vertical-align: middle;
-}
 
 .hamburger-lines {
   display: none;
@@ -72,3 +74,37 @@ a {
     background: #0e2431;
   }
 }
+//----------------------------------------------------------------
+
+// сетка страницы --------------------
+.page {
+  display: flex;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  color: $color-text_dark;
+}
+
+.menu {
+  align-self: flex-start;
+  position: sticky;
+  left: 0;
+  top: 0;
+  height: 100vh;  
+}
+//---------------------------------------------------------------
+
+// меню--------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
