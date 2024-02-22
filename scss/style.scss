@@ -43,12 +43,13 @@ $color-element_1: rgb(189,25,75);
   text-wrap: nowrap;
   * {
     padding: 10px 15px;
-    text-align: center;
+    display: block;
   }
   &:hover {
     background-color: $color-element_1;
+    box-shadow: 1px 1px 1px 1px rgb(216, 215, 215)
   }
-  a {
+  * {
     color: $color-text_dark;
     &:hover {
       color: $color-text_light;
@@ -93,9 +94,64 @@ $color-element_1: rgb(189,25,75);
 }
 //---------------------------------------------------------------
 
-// меню--------------------------------------------------------
+// меню блок--------------------------------------------------------
+.menu {
+  padding: 30px 15px;
+  background-color: $color-background-block;
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+  .minu-line {
+    margin-bottom: 20px;
+  }
+}
+// ----------------------------------------------------------------
 
-
+// меню список--------------------------------------------------------
+.menu-list {
+  li {
+    * {
+      padding-left: 40px;
+      background-size: 20px;
+      background-position: 10px center;
+      background-repeat: no-repeat;
+    }
+  }
+  .dashboard * {
+    background-image: url(../images/icons/dashboard_gray.svg);
+  }
+  .dashboard *:hover {
+    background-image: url(../images/icons/dashboard_white.svg);
+  }
+  .user-profile * {
+    background-image: url(../images/icons/account_gray.svg);
+  }
+  .user-profile *:hover {
+    background-image: url(../images/icons/account_white.svg);
+  }
+  .maps * {
+    background-image: url(../images/icons/map_gray.svg);
+  }
+  .maps *:hover {
+    background-image: url(../images/icons/map_white.svg);
+  }
+  .notifications * {
+    background-image: url(../images/icons/notify_gray.svg);
+  }
+  .notifications *:hover {
+    background-image: url(../images/icons/notify_white.svg);
+  }
+  .support * {
+    background-image: url(../images/icons/support_gray.svg);
+  }
+  .support *:hover {
+    background-image: url(../images/icons/support_white.svg);
+  }
+}
+//----------------------------------------------------------------
 
 
 
