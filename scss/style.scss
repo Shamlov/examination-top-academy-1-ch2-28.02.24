@@ -58,7 +58,7 @@ $color-element_1: rgb(189,25,75);
 } 
 
 .hamburger-lines {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: absolute;
@@ -91,6 +91,10 @@ $color-element_1: rgb(189,25,75);
   left: 0;
   top: 0;
   height: 100vh;  
+}
+
+.body {
+  flex-grow: 1;
 }
 //---------------------------------------------------------------
 
@@ -154,7 +158,9 @@ $color-element_1: rgb(189,25,75);
 //----------------------------------------------------------------
 
 
-
+input {
+  display: block;
+}
 
 
 
