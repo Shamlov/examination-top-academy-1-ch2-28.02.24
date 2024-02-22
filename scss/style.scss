@@ -1,19 +1,74 @@
 @import "null.scss";
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+// font-family: "Roboto", sans-serif;
 @mixin flexible () {
   display: flex;
   justify-content: center;
   align-items: center;
-  }
-
-@mixin absolute-centering() {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
 }
 
+$color-text_light: rgb(245,245,245);
+$color-text_dark: rgb(55,55,55);
+$color-background-page: rgb(230,230,230);
+$color-background-block: rgb(245,245,245);
+$color-element_1: rgb(189,25,75);
 
-h1 {
-  display: inline;
+.line {
+  border-bottom: 1px solid $color-text_dark;
+  width: 100%;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shadow-light {
+  box-shadow: 1px 1px 1px 1px rgb(216, 215, 215);
+}
+
+.shadow-hard {
+  box-shadow: 2px 2px 3px 1px rgb(183, 183, 183);
+}
+
+.text-header {
+  font-size: 1.6rem;
+}
+
+.btn {
+
+  height: 30px;
+  color: $color-text_light;
+  cursor: pointer;
+  &:hover {
+    background-color: $color-element_1;
+    background-color: rgba(255, 255, 255, 0.185);
+  }
+} 
+
+a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.hamburger-lines {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 0;
+  top: 0px;
+  cursor: pointer;
+  .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+  }
 }
