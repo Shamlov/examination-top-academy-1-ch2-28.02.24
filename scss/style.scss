@@ -168,13 +168,11 @@ $color-element_1: rgb(189,25,75);
 
 
 
-input {
-  display: block;
-}
 
 // главный блок
 main {
   padding: 30px 20px;
+  background-color: $color-background-page;
 }
 // ----------------------------------------------------------------
 
@@ -188,22 +186,53 @@ main {
 // ----------------------------------------------------------------
 
 // блок формы 
-input, 
-textarea {
-  display: block;
+.form-block {
+  padding: 20px;
+  background-color: $color-background-block;
 }
+
+.form-header {
+  background-color: $color-element_1;
+  color: $color-text_light;
+  padding: 10px 20px;
+  line-height: 1.6;
+  margin-top: -40px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  h2 {
+    font-weight: 700;
+  }
+}
+
 
 .form {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   grid-auto-rows: auto;
+  gap: 20px;
   grid-template-areas: 
-    "company company username username email email"
-    "first-name first-name first-name last-name last-name last-name"
-    "address address address address address address"
-    "city city country country postal postal"
-    "about about about about about about"
-    ;
+  "company company username username email email"
+  "first-name first-name first-name last-name last-name last-name"
+  "address address address address address address"
+  "city city country country postal postal"
+  "about about about about about about";
+
+  input, 
+  textarea {
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 2;
+    border-bottom: 1px solid $color-text_dark;
+    background-color: $color-background-block;
+    margin-left: -10px;
+  }
+  label {
+    padding-left: 10px;
+  }
+  textarea {
+    height: 70px;
+  }
 }
 
 .company {
@@ -235,6 +264,9 @@ textarea {
 }
 .about {
   grid-area: about;
+}
+.btn-form {
+  grid-area: btn-form;
 }
 
 
