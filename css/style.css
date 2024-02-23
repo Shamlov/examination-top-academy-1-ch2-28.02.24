@@ -237,14 +237,14 @@ main {
   grid-template-columns: repeat(6, minmax(0, 1fr));
   grid-auto-rows: auto;
   gap: 20px;
-  grid-template-areas: "company company username username email email" "first-name first-name first-name last-name last-name last-name" "address address address address address address" "city city country country postal postal" "about about about about about about";
+  grid-template-areas: "company company username username email email" "first-name first-name first-name last-name last-name last-name" "address address address address address address" "city city country country postal postal" "about about about about about about" "btn-form btn-form btn-form btn-form btn-form btn-form";
 }
 .form input,
 .form textarea {
   display: block;
   width: 100%;
   height: 30px;
-  line-height: 2;
+  line-height: 1.1;
   border-bottom: 1px solid rgb(55, 55, 55);
   background-color: rgb(245, 245, 245);
   margin-left: -10px;
@@ -254,6 +254,7 @@ main {
 }
 .form textarea {
   height: 70px;
+  margin-top: 10px;
 }
 
 .company {
@@ -298,4 +299,12 @@ main {
 
 .btn-form {
   grid-area: btn-form;
+  margin-left: auto;
+  padding: 10px 0;
+  min-width: 280px;
+  text-align: center;
+  background-color: rgb(189, 25, 75);
+}
+.btn-form:hover {
+  background-color: rgb(161, 22, 64);
 }/*# sourceMappingURL=style.css.map */
