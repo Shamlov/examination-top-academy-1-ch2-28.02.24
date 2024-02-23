@@ -61,14 +61,13 @@ $color-element_1_hover: rgb(161, 22, 64);
 
 .hamburger-lines {
   display: none;
-  // display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: absolute;
-  height: 20px;
-  width: 20px;
-  left: 0;
-  top: 0px;
+  height: 30px;
+  width: 30px;
+  left: 20px;
+  top: 27px;
   cursor: pointer;
   .line {
     display: block;
@@ -111,6 +110,8 @@ $color-element_1_hover: rgb(161, 22, 64);
   }
   .minu-line {
     margin-bottom: 20px;
+    margin-left: -15px;
+    width: calc(100% + 30px);
   }
 }
 // ----------------------------------------------------------------
@@ -221,6 +222,7 @@ main {
   }
   label {
     padding-left: 10px;
+    display: block;
   }
   textarea {
     height: 70px;
@@ -276,7 +278,7 @@ main {
   flex-shrink: 1;
   align-self: flex-start;
   text-align: center;
-  padding: 20px 10px;
+  padding: 20px;
   background-color: $color-background-block;
   .img-user-block {
     margin: -50px auto 20px auto;
@@ -288,6 +290,9 @@ main {
   h3 {
     font-weight: 700;
     margin-bottom: 20px;
+  }
+  .description-text {
+    line-height: 1.3;
   }
   
 }
@@ -305,8 +310,69 @@ main {
 }
 // ----------------------------------------------------------------
 
+// подвал---------------------------------------------------
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-background-page;
+  padding: 30px 20px;
+}
+.footer-menu {
+  display: flex;
+  color: $color-text_dark;
+  a{
+    padding: 5px;
+    margin-right: 30px;
+    color: $color-text_dark;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+// ---------------------------------------------------------
 
+@media screen and (max-width: 1000px) {
+  .main {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  .user-card {
+    order: -1;
+  }
+}
 
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .hamburger-lines {
+    display: flex;
+  }
+  .head h1 {
+    padding-left: 50px;
+  }
+}
 
-
+@media screen and (max-width: 500px) {
+  .form {
+    display: block;
+    label {
+      margin-bottom: 30px;
+      display: block;
+    }
+    input,
+    textarea {
+      margin: -5px 0 0 0 ;
+    }
+  }
+  .footer-menu {
+    a {
+      margin-right: 15px;
+    }
+  }
+  .btn-form {
+    min-width: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+}
 
